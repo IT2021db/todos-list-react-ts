@@ -3,8 +3,8 @@ import { getExampleTasks } from "./features/tasks/getExampleTasks";
 import { saveTasksInLocalStorage } from "./features/tasks/tasksLocalStorage";
 import {
     fetchExampleTasks,
-    fetchExampleTasks   ,
     fetchExampleTasksError,
+    fetchExampleTasksSuccess,
     selectTasks
 } from "./features/tasks/tasksSlice";
 
