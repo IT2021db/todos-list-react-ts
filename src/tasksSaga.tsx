@@ -7,7 +7,7 @@ import {
     fetchExampleTasksSuccess,
     selectTasks
 } from "./features/tasks/tasksSlice";
-
+//dodaj typ string
 function* saveTasksInLocalStorageHandler() {
     const tasks = yield select(selectTasks);
     yield call(saveTasksInLocalStorage, tasks);

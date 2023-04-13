@@ -1,13 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getTasksFromLocalStorage } from './tasksLocalStorage';
 
+interface Task {
+    id: number;
+    content: string;
+    done: boolean;
+  }
+
+interface InitialState{
+    tasks: Task[] ;
+    hideDone: boolean;
+    loading: boolean;
+}
+
+const initialState:InitialState={
+    tasks: getTasksFromLocalStorage(),
+    hideDone: false,
+    loading: false,
+}
+
 const tasksSlice = createSlice({
     name: 'tasks',
-    initialState: {
-        tasks: getTasksFromLocalStorage(),
-        hideDone: false,
-        loading: false,
-    },
+    initialState,
 
     reducers: {
         addTask: ({ tasks }, { payload: task }) => {
@@ -56,18 +70,18 @@ export const {
     fetchExampleTasksError,
     setTasks } = tasksSlice.actions;
 
-const selectTasksState = state => state.tasks;
+const selectTasksState = (state:{tasks:InitialState})  => state.tasks;
 
-export const selectTasks = state => selectTasksState(state).tasks;
-export const selectHideDone = state => selectTasksState(state).hideDone;
-export const selectIsEveryTaskDone = state => selectTasksState(state).tasks.every(({ done }) => done);
-export const selectAreTasksEmpty = state => selectTasksState(state).tasks.length === 0;
-export const selectLoading = state => selectTasksState(state).loading;
+export const selectTasks = (state:{tasks:InitialState}) => selectTasksState(state).tasks;
+export const selectHideDone = (state:{tasks:InitialState})  => selectTasksState(state).hideDone;
+export const selectIsEveryTaskDone = (state:{tasks:InitialState})  => selectTasksState(state).tasks.every(({ done }) => done);
+export const selectAreTasksEmpty = (state:{tasks:InitialState})  => selectTasksState(state).tasks.length === 0;
+export const selectLoading = (state:{tasks:InitialState})  => selectTasksState(state).loading;
 
-export const getTaskById = (state, taskId) =>
-    selectTasks(state).find(({ id }) => id === taskId);
+export const getTaskById = ((state:{tasks:InitialState} , taskId: number) =>
+    selectTasks(state).find(({ id }) => id === taskId));
 
-export const selectTasksByQuery = (state, query) => {
+export const selectTasksByQuery = (state:{tasks:InitialState} , query:string) => {
     const tasks = selectTasks(state);
 
     if (!query || query.trim() === "") {

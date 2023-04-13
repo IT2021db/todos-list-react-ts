@@ -2,7 +2,7 @@ import React from 'react';
 import Section from '../../common/Section';
 import Header from '../../common/Header';
 import Container from '../../common/Container';
-import { ParagraphStyled } from '../paragraphStyled.js';
+import { ParagraphStyled } from '../paragraphStyled.tsx';
 
 const AuthorPage = () => (
     <Container>

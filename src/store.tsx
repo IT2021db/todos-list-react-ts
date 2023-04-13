@@ -13,5 +13,6 @@ const store= configureStore({
 });
 
 sagaMiddleware.run(watchFetchExampleTasks);
+export type RootState = ReturnType<typeof store.getState>
 
 export default store;

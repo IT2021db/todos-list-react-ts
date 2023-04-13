@@ -5,10 +5,17 @@ import Container from '../../../common/Container';
 import { useParams } from 'react-router-dom';
 import { getTaskById } from '../tasksSlice';
 import { useSelector } from "react-redux";
-import { ParagraphStyled } from "../../paragraphStyled.js"
+import { ParagraphStyled } from "../../paragraphStyled";
+
+
+// interface GetTaskById {
+//     state: 
+//     id:string;
+// }
+
 
 function TaskPage() {
-    const { id } = useParams();
+    const { id } = useParams<{id: string}>();
     const task = useSelector(state => getTaskById(state, id));
 
     return (

@@ -6,7 +6,7 @@ import TaskPage from './features/tasks/TaskPage';
 import { toAuthor, toTask, toTasks } from './routes';
 import Navigation from './Navigation';
 
-const App = () => (
+const App = (props:any) => (
 	<HashRouter>
 		<Navigation />
 		<Switch>
