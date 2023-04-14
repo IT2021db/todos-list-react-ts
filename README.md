@@ -5,7 +5,7 @@
 Description of the project:
 
 The project is a simple task list note, written in Type Script for React.js, where you can wright your tasks, sign as done or remove from the list.
-This project is migrated from its previous version written in React.js ( https://github.com/IT2021db/todos-list-react )
+This project is migrated from its previous version written in React.js  https://github.com/IT2021db/todos-list-react 
 
 ## Demo
 
