@@ -4,11 +4,12 @@
 
 Description of the project:
 
-The project is a simple task list note, where you cam wright your tasks, sign as done or remove from the list.
+The project is a simple task list note, where you can wright your tasks, sign as done or remove from the list.
+This project is migrated from its previous version written in React.js ( https://github.com/IT2021db/todos-list-react )
 
 ## Demo
 
-https://it2021db.github.io/todos-list-react/
+https://it2021db.github.io/todos-list-ts/
 
 ## Technologies used in project:
 
