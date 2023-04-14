@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/todos-list-react/static/js/main.cd85c1d3.js",
+    "index.html": "/todos-list-react/index.html",
+    "main.cd85c1d3.js.map": "/todos-list-react/static/js/main.cd85c1d3.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.cd85c1d3.js"
+  ]
+}
