@@ -7,14 +7,14 @@ export const Buttons = styled.button`
   margin: 0 0 0 20px;
   transition: color 0.3s;
   cursor: pointer;
- 
 
-  ${({ disabled }) => disabled && css`
-  color: ${({ theme }) => theme.color.silver};
-  cursor: default;
-  `}
+  ${({ disabled }) =>
+    disabled && css`
+      color: ${({ theme }) => theme.color.silver};
+      cursor: default;
+    `}
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px){
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     display: flex;
     margin: auto;
     padding: 5px;
