@@ -2,7 +2,7 @@
   "name": "todos-list-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://it2021db.github.io/todos-list-react/",
+  "homepage": "https://it2021db.github.io/todos-list-ts/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
     "@testing-library/jest-dom": "^5.16.5",
