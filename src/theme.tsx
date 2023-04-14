@@ -1,3 +1,9 @@
+import {IndexSignature}from './features/tasks/types';
+export interface Theme {
+    color: IndexSignature;
+    breakpoint: string;
+}
+
 export const theme = {
     color: {
         black: "#000",
