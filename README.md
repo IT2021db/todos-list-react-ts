@@ -33,6 +33,7 @@ https://it2021db.github.io/todos-list-react/
 - Redux (Toolkit)
 - Redux-Saga
 - React Router
+- Type Script
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
