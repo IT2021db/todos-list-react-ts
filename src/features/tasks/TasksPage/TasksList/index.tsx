@@ -1,6 +1,6 @@
 import React from "react";
 import { RootState } from "../../../../store";
-import { Task } from "../../types";
+import { Task } from "../../../../types";
 import { useSelector, useDispatch } from "react-redux";
 import { useQueryParameter } from "../queryParameters";
 import { Link } from "react-router-dom";
