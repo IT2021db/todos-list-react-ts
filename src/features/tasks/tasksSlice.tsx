@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getTasksFromLocalStorage } from "./tasksLocalStorage";
-import { InitialState } from "./types";
+import { InitialState } from "../../types";
 
 const initialState: InitialState = {
   tasks: getTasksFromLocalStorage(),
@@ -20,7 +20,7 @@ const tasksSlice = createSlice({
       state.hideDone = !state.hideDone;
     },
     toggleTaskDone: ({ tasks }, { payload: taskId }) => {
-      const index = tasks.findIndex(({ id }) => id === taskId); //find index
+      const index = tasks.findIndex(({ id }) => id === taskId); 
       tasks[index].done = !tasks[index].done;
     },
     removeTask: ({ tasks }, { payload: taskId }) => {
@@ -72,10 +72,8 @@ export const selectAreTasksEmpty = (state: { tasks: InitialState }) =>
   selectTasksState(state).tasks.length === 0;
 export const selectLoading = (state: { tasks: InitialState }) =>
   selectTasksState(state).loading;
-
-export const getTaskById = (state: { tasks: InitialState }, taskId: number) =>
+export const getTaskById = (state: { tasks: InitialState }, taskId: string) =>
   selectTasks(state).find(({ id }) => id === taskId);
-
 export const selectTasksByQuery = (
   state: { tasks: InitialState },
   query: string |null
