@@ -1,4 +1,4 @@
-import {IndexSignature}from './features/tasks/types';
+import {IndexSignature}from './types';
 export interface Theme {
     color: IndexSignature;
     breakpoint: string;
