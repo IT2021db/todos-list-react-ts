@@ -2,8 +2,8 @@ import React from "react";
 import { Header, Wrapper } from "./styled";
 
 interface SectionProps {
-  title: string | null;
-  body?: React.ReactNode;
+  title: string;
+  body: React.ReactNode;
   extraHeaderElement?: React.ReactNode;
 }
 
