@@ -5,10 +5,9 @@ export const useQueryParameter = (key: string) => {
   const searchParams = new URLSearchParams(location.search);
   return searchParams.get(key);
 };
-
 interface UseReplaceQueryParameter {
   key: string;
-  value: string;
+  value: string | undefined;    
 }
 
 export const useReplaceQueryParameter = () => {
