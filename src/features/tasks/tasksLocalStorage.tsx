@@ -2,7 +2,7 @@ import { Task } from "../../types";
 
 const localStorageKey: string = "tasks";
 
-export const saveTasksInLocalStorage = (tasks?: string): void =>
+export const saveTasksInLocalStorage = (tasks: string): void =>
   localStorage.setItem(localStorageKey, JSON.stringify(tasks));
 
 export const getTasksFromLocalStorage = (): Task[] => {
