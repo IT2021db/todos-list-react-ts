@@ -1,6 +1,6 @@
 import React from "react";
 interface HeaderProps {
-  title: string | null;
+  title: string;
 }
 
 export const Header = ({ title }: HeaderProps) => (
