@@ -1,10 +1,12 @@
 import {IndexSignature}from './types';
 export interface Theme {
     color: IndexSignature;
-    breakpoint: string;
+    breakpoint: {
+        mobileMax: number;
+    };
 }
 
-export const theme = {
+export const theme: Theme = {
     color: {
         black: "#000",
         silver: "#ccc",
