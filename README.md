@@ -9,7 +9,7 @@ This project is migrated from its previous version written in React.js  https://
 
 ## Demo
 
-https://it2021db.github.io/todos-list-ts/
+https://it2021db.github.io/todos-list-react-ts/
 
 ## Technologies used in project:
 
