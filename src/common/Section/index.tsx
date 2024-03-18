@@ -1,10 +1,11 @@
 import React from "react";
+import { ReactNode } from "react";
 import { Header, Wrapper } from "./styled";
 
 interface SectionProps {
-  title: string;
-  body: React.ReactNode;
-  extraHeaderElement?: React.ReactNode;
+  title: ReactNode;
+  body: ReactNode;
+  extraHeaderElement?: ReactNode;
 }
 
 const Section = ({ title, body, extraHeaderElement }: SectionProps) => (
